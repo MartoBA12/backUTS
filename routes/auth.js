@@ -139,7 +139,7 @@ router.post('/eraseuser', async (req, res) => {
 
 router.post('/updateuser', async(req, res) => {
     //validacion de ususario
-    const {error} = schemaRegister.validate(req.body)
+    const {error} = schemaUpdate.validate(req.body)
     if (error){
         return res.status(400).json({
             error: error.details[0].message
